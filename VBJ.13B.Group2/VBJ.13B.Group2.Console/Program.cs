@@ -21,14 +21,12 @@ public class Program
             // ugyanaz mint i + 1 + ". munkanap"
             Console.Write($"{i+1}. munkanap |\t");
             Console.WriteLine(dateTime);
-            gls.WorkDay(dateTime);
+            gls.WorkDay();
             dateTime = dateTime.AddDays(1);
 
             Thread.Sleep(2000);
         }
-        // Csomaghozzárendelés
 
-        // Csomagszállítás
         Console.WriteLine();
     }
 }

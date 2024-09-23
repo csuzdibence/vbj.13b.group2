@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace VBJ._13B.Group2
 {
@@ -16,7 +17,7 @@ namespace VBJ._13B.Group2
             Name = name;
 
             // 10 és 16 között -> balról zárt és jobbról nyitott intervallum
-            MaxPackageNumber = rnd.Next(10, 17);
+            MaxPackageNumber = rnd.Next(2, 5);
         }
 
         public string Name { get; set; }
@@ -28,12 +29,15 @@ namespace VBJ._13B.Group2
         // bool -> sikerült felvenni a csomagot, vagy nem sikerült
         public bool PickUpPackage(Package package)
         {
+            Thread.Sleep(1000);
             if (IsPackagesFull())
             {
+                Console.WriteLine($"\t{Name} futárnak nem sikerült felvennie a #{package.ID} csomagot");
                 return false;
             }
 
-            packages.Add(package);
+            packages.Add(package); 
+            Console.WriteLine($"\t{Name} futár felvette a #{package.ID} csomagot");
             return true;
         }
 
@@ -42,9 +46,14 @@ namespace VBJ._13B.Group2
             return packages.Count >= MaxPackageNumber;
         }
 
-        public void DeliverPackage(Package package)
+        public void DeliverPackages()
         {
-            packages.Remove(package);
+            Thread.Sleep(1000);
+            foreach (var package in packages)
+            {
+                Console.WriteLine($"\t\t{package.ID} csomag ki lett szállítva {Name} által.");
+            }
+            packages.Clear();
         }
 
         public override string ToString()
