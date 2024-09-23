@@ -46,5 +46,10 @@ namespace VBJ._13B.Group2
         {
             packages.Remove(package);
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
