@@ -18,6 +18,7 @@
         }
 
         // Tulajdonság/property hozzáférhetőség a mezőhöz
+        // Shortcut prop -> tab
         public int ID { get; }
     }
 }
