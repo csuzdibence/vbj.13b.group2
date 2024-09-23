@@ -13,6 +13,7 @@
         {
             for (int i = 0; i < prisoners.Length; i++)
             {
+                // ha nincs az adott pozíción rab
                 if (prisoners[i] is null)
                 {
                     prisoners[i] = prisoner;
