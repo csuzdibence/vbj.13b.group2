@@ -5,7 +5,9 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VBJ.13B.Group2.Console", "VBJ.13B.Group2.Console\VBJ.13B.Group2.Console.csproj", "{8B1A7A53-B070-4C0C-9A94-23F250D93BCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VBJ.13B.Group2.OOPGyakorlo1", "VBJ.13B.Group2.OOPGyakorlo1\VBJ.13B.Group2.OOPGyakorlo1.csproj", "{4330F5F2-0892-4C2C-83DF-8E6F162898B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VBJ.13B.Group2.OOPGyakorlo1", "VBJ.13B.Group2.OOPGyakorlo1\VBJ.13B.Group2.OOPGyakorlo1.csproj", "{4330F5F2-0892-4C2C-83DF-8E6F162898B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VBJ.13B.Group2.WebApp", "VBJ.13B.Group2.WebApp\VBJ.13B.Group2.WebApp.csproj", "{BE805AFB-9E17-4410-9682-67BD86DF248B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4330F5F2-0892-4C2C-83DF-8E6F162898B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4330F5F2-0892-4C2C-83DF-8E6F162898B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4330F5F2-0892-4C2C-83DF-8E6F162898B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE805AFB-9E17-4410-9682-67BD86DF248B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE805AFB-9E17-4410-9682-67BD86DF248B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE805AFB-9E17-4410-9682-67BD86DF248B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE805AFB-9E17-4410-9682-67BD86DF248B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
