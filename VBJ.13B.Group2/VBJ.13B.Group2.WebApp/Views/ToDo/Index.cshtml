@@ -1,0 +1,22 @@
+﻿@model List<VBJ._13B.Group2.WebApp.Models.ToDoItem>
+
+@{
+    // Dictionary -> kulcs érték párt tárol
+    ViewData["Title"] = "Elvégzendő teendők";
+}
+
+<h2>Elvégzendő teendők</h2>
+
+<table>
+    <thead>
+    <th>Azonosító</th>
+    <th>Cím</th>
+    <th>Elkészült-e</th>
+    </thead>
+    <tbody>
+        @foreach (ToDoItem toDo in Model)
+        {
+            
+        }
+    </tbody>
+</table>
