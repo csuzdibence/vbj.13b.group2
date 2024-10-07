@@ -8,7 +8,7 @@ namespace VBJ._13B.Group2.WebApp.Controllers
         public IActionResult Index()
         {
             ViewBag.Message = "Hello world";
-            return View();
+            return View("Index");
         }
     }
 }

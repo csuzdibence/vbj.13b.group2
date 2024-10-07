@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Béna számológép";
+}
+
+@using (Html.BeginForm("Add", "Calculator", FormMethod.Post))
+{
+    // Első textbox
+    <label for="number1">Első szám:</label>
+    <input type="number" name="number1asd" />
+
+    // Második textbox
+    <label for="number1">Második szám:</label>
+    <input type="number" name="number2asd" />
+
+    // submit gomb
+    <input type="submit"/>
+}
