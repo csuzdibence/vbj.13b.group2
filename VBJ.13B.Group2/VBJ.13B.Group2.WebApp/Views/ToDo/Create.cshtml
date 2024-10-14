@@ -1,0 +1,18 @@
+﻿@model ToDoItem
+
+@{
+}
+
+<h1>Create nézet - ToDo</h1>
+
+@using (Html.BeginForm("AddToDo", "ToDo", FormMethod.Post))
+{
+    <label>Cím:</label>
+    @Html.TextBoxFor(toDo => toDo.Title)
+
+    <label>Elkészült-e a teendő?</label>
+    @Html.CheckBoxFor(toDo => toDo.HasCompleted)
+
+    // submit gomb
+<input type="submit" />
+}

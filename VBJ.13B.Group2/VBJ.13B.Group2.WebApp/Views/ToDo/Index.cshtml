@@ -1,22 +1,37 @@
-﻿@model List<VBJ._13B.Group2.WebApp.Models.ToDoItem>
+﻿@model List<ToDoItem>
 
 @{
     // Dictionary -> kulcs érték párt tárol
     ViewData["Title"] = "Elvégzendő teendők";
 }
 
-<h2>Elvégzendő teendők</h2>
+<h1>Elvégzendő teendők</h1>
+
+<a href="@Url.Action("Create")">Hozz létre egy új elvégzendő teendőt</a>
 
 <table>
     <thead>
     <th>Azonosító</th>
     <th>Cím</th>
     <th>Elkészült-e</th>
+    <th></th>
     </thead>
     <tbody>
         @foreach (ToDoItem toDo in Model)
         {
-            
+            <tr>
+                <td>@toDo.Id</td>
+                <td><a href="@Url.Action("Edit", new { id = toDo.Id })">@toDo.Title</a></td>
+                @if (toDo.HasCompleted)
+                {
+                    <td>Elkészült</td>
+                }
+                else
+                {
+                    <td>Nem készült el</td>
+                }
+                <td><a href="@Url.Action("Delete", new { id = toDo.Id })">Törlés</a></td>
+            </tr>
         }
     </tbody>
 </table>

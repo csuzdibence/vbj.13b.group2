@@ -1,0 +1,20 @@
+﻿@model ToDoItem
+@{
+}
+
+<h1>Edit nézet - ToDo</h1>
+
+@using (Html.BeginForm("EditToDo", "ToDo", FormMethod.Post))
+{
+    // Rejtetten hozzáadjuk a formhoz az azonosítót
+    @Html.HiddenFor(toDo => toDo.Id)
+
+    <label>Cím:</label>
+    @Html.TextBoxFor(toDo => toDo.Title)
+
+    <label>Elkészült-e a teendő?</label>
+    @Html.CheckBoxFor(toDo => toDo.HasCompleted)
+
+    // submit gomb
+    <input type="submit" />
+}

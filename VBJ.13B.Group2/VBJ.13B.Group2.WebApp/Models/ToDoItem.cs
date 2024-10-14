@@ -19,5 +19,7 @@
         /// Azt jelöli hogy a teendő elvégzésre került vagy sem
         /// </summary>
         public bool HasCompleted { get; set; }
+
+        public string Name => "Név";
     }
 }
