@@ -8,6 +8,10 @@
 
 ## Solution projektjei + magyarázat
 
+### HandballFantasy
+
+MVC dolgozat egy lehetséges megoldása
+
 ### StudentWebApp
 
 MVC feladatsor negyedik feladatának megoldása, szintén egy ASP.NET MVC applikáció azonban csak az említett feladatot tartalmazza.
