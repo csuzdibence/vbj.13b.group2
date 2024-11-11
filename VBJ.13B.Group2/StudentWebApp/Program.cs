@@ -1,7 +1,12 @@
+using Students.Model;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Ez regisztrálja az IStudentManager interface-hez az InMemoryStudentManagert
+builder.Services.AddSingleton<IStudentManager, JsonStudentManager>();
 
 var app = builder.Build();
 
