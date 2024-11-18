@@ -1,12 +1,17 @@
 using Students.Model;
+using Students.Model.Implementations;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// IoC container - C#-ban beépített - Inversion of Control
 // Ez regisztrálja az IStudentManager interface-hez az InMemoryStudentManagert
+builder.Services.AddSingleton<IStudentManager, InMemoryStudentManager>();
 builder.Services.AddSingleton<IStudentManager, JsonStudentManager>();
+
+builder.Services.AddSingleton<IStudentValidator, AlwaysTrueStudentValidator>();
 
 var app = builder.Build();
 

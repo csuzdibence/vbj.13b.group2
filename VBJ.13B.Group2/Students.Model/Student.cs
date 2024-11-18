@@ -29,5 +29,7 @@
         /// Ez a property az email címet adja meg
         /// </summary>
         public string EmailAddress { get; set; }
+
+        public bool IsValid { get; set; }
     }
 }

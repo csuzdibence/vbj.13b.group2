@@ -1,6 +1,7 @@
 ﻿@using Students.Model
 @model List<Student>
 @{
+    string usedClassName = "info";
 }
 
 <a href="@Url.Action("Register")">Regisztrálj egy új diákot!</a>
@@ -21,10 +22,11 @@
     <tbody>
         @foreach (Student student in Model)
         {
+            usedClassName = student.IsValid ? "success" : "danger";
             <tr>
                 <td>@student.Id</td>
-                <td>@student.LastName</td>
-                <td>@student.FirstName</td>
+                <td class="text-@usedClassName">@student.LastName</td>
+                <td class="text-@usedClassName">@student.FirstName</td>
                 <td>@student.DateOfRegistry</td>
                 <td>@student.EmailAddress</td>
                 <td><a href="@Url.Action("Delete", new { id = student.Id })">Törlés</a></td>

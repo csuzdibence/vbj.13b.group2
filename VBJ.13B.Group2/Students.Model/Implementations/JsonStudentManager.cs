@@ -9,6 +9,14 @@ namespace Students.Model
     public class JsonStudentManager : IStudentManager
     {
         private const string jsonFileName = "student.json";
+
+        IStudentValidator studentValidator;
+
+        public JsonStudentManager(IStudentValidator studentValidator)
+        {
+            this.studentValidator = studentValidator;
+        }
+
         public void AddStudent(Student student)
         {
             var students = ReadStudents();
@@ -22,7 +30,12 @@ namespace Students.Model
             try
             {
                 var json = File.ReadAllText(jsonFileName);
-                return JsonSerializer.Deserialize<List<Student>>(json);
+                var students = JsonSerializer.Deserialize<List<Student>>(json);
+                foreach (var student in students)
+                {
+                    student.IsValid = studentValidator.ValidateStudent(student);
+                }
+                return students;
             }
             catch (Exception)
             {

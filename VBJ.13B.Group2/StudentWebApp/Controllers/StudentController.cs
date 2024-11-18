@@ -9,12 +9,14 @@ namespace StudentWebApp.Controllers
     public class StudentController : Controller
     {
         IStudentManager studentManager;
+        IStudentValidator studentValidator;
 
         // Konstruktor injection
         // StudentController függ a StudentManagertől
-        public StudentController(IStudentManager studentManager)
+        public StudentController(IStudentManager studentManager, IStudentValidator studentValidator)
         {
             this.studentManager = studentManager;
+            this.studentValidator = studentValidator;
         }
 
         // Root végpont -> /Student
@@ -34,6 +36,7 @@ namespace StudentWebApp.Controllers
         {
             var students = studentManager.ReadStudents();
             student.Id = students.Any() ? students.Last().Id + 1 : 1;
+            student.IsValid = studentValidator.ValidateStudent(student);
             student.DateOfRegistry = DateTime.Now;
             studentManager.AddStudent(student);
             return RedirectToAction("Index");
