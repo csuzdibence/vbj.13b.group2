@@ -11,7 +11,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<IStudentManager, InMemoryStudentManager>();
 builder.Services.AddSingleton<IStudentManager, JsonStudentManager>();
 
-builder.Services.AddSingleton<IStudentValidator, AlwaysTrueStudentValidator>();
+builder.Services.AddSingleton<IStudentValidator, EmailDomainValidator>();
 
 var app = builder.Build();
 
