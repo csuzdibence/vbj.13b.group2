@@ -3,17 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VBJ.13B.Group2.Console", "VBJ.13B.Group2.Console\VBJ.13B.Group2.Console.csproj", "{8B1A7A53-B070-4C0C-9A94-23F250D93BCD}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VBJ.13B.Group2.OOPGyakorlo1", "VBJ.13B.Group2.OOPGyakorlo1\VBJ.13B.Group2.OOPGyakorlo1.csproj", "{4330F5F2-0892-4C2C-83DF-8E6F162898B6}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VBJ.13B.Group2.WebApp", "VBJ.13B.Group2.WebApp\VBJ.13B.Group2.WebApp.csproj", "{BE805AFB-9E17-4410-9682-67BD86DF248B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentWebApp", "StudentWebApp\StudentWebApp.csproj", "{036FF629-D002-4E95-9035-2DC265B8FD63}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HandballFantasy", "HandballFantasy\HandballFantasy.csproj", "{2658956A-9790-4F48-9962-57EE6F527F76}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students.Model", "Students.Model\Students.Model.csproj", "{638C0150-C161-4B4E-B14E-3463A1766D32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Students.Model", "Students.Model\Students.Model.csproj", "{638C0150-C161-4B4E-B14E-3463A1766D32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,26 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8B1A7A53-B070-4C0C-9A94-23F250D93BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B1A7A53-B070-4C0C-9A94-23F250D93BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B1A7A53-B070-4C0C-9A94-23F250D93BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B1A7A53-B070-4C0C-9A94-23F250D93BCD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4330F5F2-0892-4C2C-83DF-8E6F162898B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4330F5F2-0892-4C2C-83DF-8E6F162898B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4330F5F2-0892-4C2C-83DF-8E6F162898B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4330F5F2-0892-4C2C-83DF-8E6F162898B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BE805AFB-9E17-4410-9682-67BD86DF248B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE805AFB-9E17-4410-9682-67BD86DF248B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE805AFB-9E17-4410-9682-67BD86DF248B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE805AFB-9E17-4410-9682-67BD86DF248B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{036FF629-D002-4E95-9035-2DC265B8FD63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{036FF629-D002-4E95-9035-2DC265B8FD63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{036FF629-D002-4E95-9035-2DC265B8FD63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{036FF629-D002-4E95-9035-2DC265B8FD63}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2658956A-9790-4F48-9962-57EE6F527F76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2658956A-9790-4F48-9962-57EE6F527F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2658956A-9790-4F48-9962-57EE6F527F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2658956A-9790-4F48-9962-57EE6F527F76}.Release|Any CPU.Build.0 = Release|Any CPU
 		{638C0150-C161-4B4E-B14E-3463A1766D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{638C0150-C161-4B4E-B14E-3463A1766D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{638C0150-C161-4B4E-B14E-3463A1766D32}.Release|Any CPU.ActiveCfg = Release|Any CPU

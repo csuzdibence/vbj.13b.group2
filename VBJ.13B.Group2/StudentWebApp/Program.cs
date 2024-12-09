@@ -8,8 +8,8 @@ builder.Services.AddControllersWithViews();
 
 // IoC container - C#-ban beépített - Inversion of Control
 // Ez regisztrálja az IStudentManager interface-hez az InMemoryStudentManagert
-builder.Services.AddSingleton<IStudentManager, InMemoryStudentManager>();
-builder.Services.AddSingleton<IStudentManager, JsonStudentManager>();
+builder.Services.AddScoped<IStudentManager, DatabaseStudentManager>();
+builder.Services.AddDbContext<StudentDbContext>();
 
 builder.Services.AddSingleton<IStudentValidator, EmailDomainValidator>();
 
