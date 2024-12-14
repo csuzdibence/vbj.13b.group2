@@ -8,7 +8,13 @@ builder.Services.AddControllersWithViews();
 
 
 
-
+builder.Services.AddDistributedMemoryCache(); // For in-memory session storage
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Set session timeout
+    options.Cookie.HttpOnly = true;                // Prevent client-side access to the cookie
+    options.Cookie.IsEssential = true;             // Ensure the cookie is sent even if tracking is disabled
+});
 
 
 
@@ -16,7 +22,11 @@ builder.Services.AddControllersWithViews();
 
 // IoC container - C#-ban beépített - Inversion of Control
 // Ez regisztrálja az IStudentManager interface-hez az InMemoryStudentManagert
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IStudentManager, DatabaseStudentManager>();
+builder.Services.AddScoped<ITeacherManager, TeacherManager>();
+builder.Services.AddScoped<IPasswordService, PasswordService>();
+builder.Services.AddScoped<ILogin, TeacherLoginService>();
 builder.Services.AddDbContext<StudentDbContext>();
 builder.Services.AddSingleton<IStudentValidator, EmailDomainValidator>();
 
@@ -44,6 +54,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseSession();
 
 app.UseAuthorization();
 

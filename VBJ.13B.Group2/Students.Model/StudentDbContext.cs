@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Reflection.Metadata;
 
 namespace Students.Model
 {
@@ -6,6 +7,16 @@ namespace Students.Model
     {
         // ez egy adatbázis táblát jelöl
         public DbSet<Student> Students { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Teacher>()
+                .HasMany(e => e.Students)
+                .WithOne(e => e.Teacher)
+                .HasForeignKey(e => e.TeacherId)
+                .IsRequired();
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

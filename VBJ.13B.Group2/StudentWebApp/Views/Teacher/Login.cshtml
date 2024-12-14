@@ -1,0 +1,17 @@
+﻿@model string
+
+<h1>Bejelentkezés</h1>
+
+@if (Model != null)
+{
+    <p class="text-danger">@Model</p>
+}
+
+<form asp-controller="Teacher" asp-action="LoginTeacher" method="post">
+    <label for="email">Email cím:</label>
+    <input name="email" type="email" required />
+    <label for="password">Jelszó:</label>
+    <input name="password" type="password" required />
+
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>

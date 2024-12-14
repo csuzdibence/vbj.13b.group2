@@ -1,0 +1,34 @@
+﻿@using Students.Model
+@model List<Teacher>
+@inject ILogin loginService
+
+
+@if (!loginService.IsAuthenticated)
+{
+    <a href="@Url.Action("Create")">Regisztrálj tanárként!</a>
+}
+else
+{
+    @if (Model != null)
+    {
+        <table>
+            <thead>
+            <th>Azonosító</th>
+            <th>Vezetéknév</th>
+            <th>Keresztnév</th>
+            <th>Email cím</th>
+            </thead>
+            <tbody>
+                @foreach (Teacher teacher in Model)
+                {
+                    <tr>
+                        <td>@teacher.ID</td>
+                        <td>@teacher.LastName</td>
+                        <td>@teacher.FirstName</td>
+                        <td>@teacher.EmailAddress</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}

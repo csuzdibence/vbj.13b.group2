@@ -1,0 +1,23 @@
+﻿@model Students.Model.Teacher
+@{
+}
+
+<h1>Regisztráljon tanárként</h1>
+
+@using (Html.BeginForm("RegisterTeacher", "Teacher"))
+{
+    <label>Vezetéknév:</label>
+    // lambdakifejezés -> x helyén bármilyen név szerepelhetne, hiszen csak egy belső paraméter
+    @Html.TextBoxFor(x => x.LastName)
+
+    <label>Keresztnév:</label>
+    @Html.TextBoxFor(x => x.FirstName)
+
+    <label>Email cím:</label>
+    @Html.TextBoxFor(x => x.EmailAddress)
+
+    <label>Jelszó:</label>
+    @Html.PasswordFor(x => x.Password)
+
+    <input type="submit" />
+}

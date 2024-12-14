@@ -1,4 +1,6 @@
-﻿namespace Students.Model
+﻿using System.Reflection.Metadata;
+
+namespace Students.Model
 {
     /// <summary>
     /// Ez az osztály egy tanulót reprezentál.
@@ -33,5 +35,15 @@
         public string Password { get; set; }
 
         public bool IsValid { get; set; }
+
+        /// <summary>
+        /// FK Id
+        /// </summary>
+        public int TeacherId { get; set; }
+
+        /// <summary>
+        /// Navigation property
+        /// </summary>
+        public Teacher Teacher { get; set; } = null!;
     }
 }
