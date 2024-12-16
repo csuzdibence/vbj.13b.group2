@@ -5,6 +5,13 @@ namespace StudentWebApp.Controllers
 {
     public class TeacherController : Controller
     {
+        private ITeacherManager teacherManager;
+
+        public TeacherController(ITeacherManager teacherManager)
+        {
+            this.teacherManager = teacherManager;
+        }
+
         public IActionResult Index()
         {
             return View();

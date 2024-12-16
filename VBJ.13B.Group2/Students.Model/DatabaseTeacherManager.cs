@@ -18,7 +18,7 @@ namespace Students.Model
 
         public IQueryable<Teacher> GetAll()
         {
-            throw new NotImplementedException();
+            return dbContext.Teachers.AsQueryable();
         }
     }
 }
