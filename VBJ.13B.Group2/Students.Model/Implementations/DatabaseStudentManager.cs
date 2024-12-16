@@ -20,7 +20,7 @@ namespace Students.Model.Implementations
 
         public List<Student> ReadStudents()
         {
-
+            return dbContext.Students.Where(x => x.IsValid).OrderBy(x => x.FirstName).ToList();
             // var query = dbContext.Students.AsQueryable();
             // SELECT * FROM Students WHERE EmailAddress == "kissbela@gmail.com" -> 1
             // query.Where(x => x.EmailAddress == "kissbela@gmail.com").ToList();

@@ -7,7 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Teacher\**" />
+    <Content Remove="Views\Teacher\**" />
+    <EmbeddedResource Remove="Views\Teacher\**" />
+    <None Remove="Views\Teacher\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Views\Teacher\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Teacher\Register.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

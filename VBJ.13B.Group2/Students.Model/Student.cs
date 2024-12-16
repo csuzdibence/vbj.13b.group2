@@ -33,5 +33,11 @@
         public string Password { get; set; }
 
         public bool IsValid { get; set; }
+
+        // Idegen kulcs
+        public int TeacherId { get; set; }
+        
+        // Navigációs tulajdonság
+        public Teacher Teacher { get; set; }
     }
 }
