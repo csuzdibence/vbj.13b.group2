@@ -17,7 +17,7 @@ namespace StudentWebApp.Controllers
             return View();
         }
 
-        public IActionResult Register()
+        public IActionResult RegisterTeachers()
         {
             return View();
         }
@@ -25,6 +25,7 @@ namespace StudentWebApp.Controllers
         // Form beküldésea weboldalról
         public IActionResult RegisterTeacher(Teacher teacher)
         {
+            teacherManager.Add(teacher);
             return RedirectToAction("Index");
         }
     }

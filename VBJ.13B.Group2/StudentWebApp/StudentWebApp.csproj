@@ -15,14 +15,11 @@
 
   <ItemGroup>
     <Content Include="Views\Teacher\Index.cshtml" />
+    <Content Include="Views\Teacher\RegisterTeachers.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Models\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Views\Teacher\Register.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
