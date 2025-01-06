@@ -10,7 +10,6 @@
     <Compile Remove="Views\Teacher\**" />
     <Content Remove="Views\Teacher\**" />
     <EmbeddedResource Remove="Views\Teacher\**" />
-    <None Remove="Views\Teacher\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +19,10 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Views\Teacher\TeacherLogin.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
