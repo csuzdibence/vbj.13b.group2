@@ -4,3 +4,15 @@
 @{
 }
 <h1>Tanári bejelentkezés</h1>
+
+
+@using (Html.BeginForm("Login", "Teacher"))
+{
+    <label>Email cím:</label>
+    <input type="text" name="email" />
+
+    <label>Jelszó:</label>
+    <input type="password" name="password" />
+
+    <input type="submit" />
+}

@@ -6,13 +6,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-
-
-
-
-
-
-
+// Session regisztráció
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.IsEssential = true;
+    options.Cookie.HttpOnly = true;
+});
 
 // IoC container - C#-ban beépített - Inversion of Control
 // Ez regisztrálja az IStudentManager interface-hez az InMemoryStudentManagert
@@ -20,20 +21,11 @@ builder.Services.AddScoped<IStudentManager, DatabaseStudentManager>();
 builder.Services.AddScoped<ITeacherManager, DatabaseTeacherManager>();
 
 builder.Services.AddScoped<IEncryptionService, SHA256EncryptionService>();
+builder.Services.AddScoped<IAuthenticationService, AuthenticationServiceWithSession>();
 
 
 builder.Services.AddDbContext<StudentDbContext>();
 builder.Services.AddSingleton<IStudentValidator, EmailDomainValidator>();
-
-
-
-
-
-
-
-
-
-
 
 var app = builder.Build();
 
@@ -47,7 +39,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseSession();
 app.UseRouting();
 
 app.UseAuthorization();
