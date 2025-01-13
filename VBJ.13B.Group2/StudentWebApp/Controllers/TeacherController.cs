@@ -16,8 +16,14 @@ namespace StudentWebApp.Controllers
             this.authenticationService = authenticationService;
         }
 
+        // /Teacher
         public IActionResult Index()
         {
+            if (!authenticationService.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
             return View();
         }
 
