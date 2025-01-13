@@ -32,6 +32,20 @@ namespace StudentWebApp.Controllers
             return View();
         }
 
+        [Route("Teacher/All")]
+        public List<Teacher> ReadAllTeachers()
+        {
+            return teacherManager.GetAll().ToList();
+        }
+
+        // Sum/4/5 -> 9
+
+        [Route("Sum/{a}/{b}")]
+        public int Sum(int a, int b)
+        {
+            return a + b;
+        }
+
         // Form beküldésea weboldalról
         public IActionResult RegisterTeacher(Teacher teacher)
         {
@@ -50,6 +64,12 @@ namespace StudentWebApp.Controllers
 
             // Nem sikerült a bejelentkezés
             return RedirectToAction("TeacherLogin");
+        }
+
+        public IActionResult Logout()
+        {
+            authenticationService.LogOut();
+            return RedirectToAction("Index");
         }
     }
 }

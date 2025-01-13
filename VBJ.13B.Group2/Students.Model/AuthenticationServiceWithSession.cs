@@ -18,7 +18,22 @@ namespace Students.Model
 
         // Van-e a sessionben bejegyzés az emailre
         public bool IsAuthenticated => 
-            httpContextAccessor.HttpContext.Session.TryGetValue("email", out byte[] value);
+            httpContextAccessor.HttpContext.Session.TryGetValue("email", out byte[] values);
+
+        public string EmailAddress
+        {
+            get 
+            {
+                httpContextAccessor.HttpContext.Session.TryGetValue("email", out byte[] values);
+
+                if (values is null)
+                {
+                    return string.Empty;
+                }
+
+                return Encoding.UTF8.GetString(values);
+            }
+        }
 
         public void LogOut()
         {
