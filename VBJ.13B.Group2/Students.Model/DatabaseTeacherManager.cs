@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
+
 namespace Students.Model
 {
     public class DatabaseTeacherManager : ITeacherManager
@@ -18,7 +20,7 @@ namespace Students.Model
 
         public IQueryable<Teacher> GetAll()
         {
-            return dbContext.Teachers.AsQueryable();
+            return dbContext.Teachers.Include(x => x.Students).AsQueryable();
         }
     }
 }
